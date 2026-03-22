@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>terminal_portfolio_v1.0.4 | About &amp; Contact</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "surface-tint": "#adc6ff",
+              "on-tertiary-fixed": "#410001",
+              "on-tertiary-fixed-variant": "#930004",
+              "primary-container": "#4d8efe",
+              "primary-fixed-dim": "#adc6ff",
+              "surface-container-low": "#1c1b1b",
+              "surface": "#131313",
+              "primary-fixed": "#d8e2ff",
+              "on-secondary-fixed-variant": "#005320",
+              "on-error-container": "#ffdad6",
+              "tertiary-container": "#ff5544",
+              "secondary-container": "#30a550",
+              "on-secondary": "#003914",
+              "inverse-surface": "#e5e2e1",
+              "outline": "#8c909f",
+              "on-tertiary-container": "#5c0001",
+              "on-tertiary": "#690002",
+              "error-container": "#93000a",
+              "inverse-primary": "#005ac1",
+              "secondary": "#6ddd81",
+              "background": "#131313",
+              "surface-container-highest": "#353534",
+              "on-primary-container": "#00285c",
+              "inverse-on-surface": "#313030",
+              "tertiary": "#ffb4a9",
+              "secondary-fixed-dim": "#6ddd81",
+              "on-primary-fixed": "#001a41",
+              "on-primary-fixed-variant": "#004494",
+              "on-primary": "#002e69",
+              "surface-dim": "#131313",
+              "surface-bright": "#3a3939",
+              "surface-container-high": "#2a2a2a",
+              "tertiary-fixed-dim": "#ffb4a9",
+              "on-surface-variant": "#c2c6d5",
+              "outline-variant": "#424753",
+              "on-surface": "#e5e2e1",
+              "on-error": "#690005",
+              "surface-container-lowest": "#0e0e0e",
+              "on-background": "#e5e2e1",
+              "surface-variant": "#353534",
+              "on-secondary-fixed": "#002108",
+              "error": "#ffb4ab",
+              "surface-container": "#201f1f",
+              "secondary-fixed": "#89fa9b",
+              "primary": "#adc6ff",
+              "on-secondary-container": "#003210",
+              "tertiary-fixed": "#ffdad5"
+            },
+            fontFamily: {
+              "headline": ["Space Grotesk"],
+              "body": ["Inter"],
+              "label": ["Space Grotesk"]
+            },
+            borderRadius: {"DEFAULT": "0rem", "lg": "0rem", "xl": "0rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+      .material-symbols-outlined {
+        font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      }
+      ::-webkit-scrollbar { width: 4px; }
+      ::-webkit-scrollbar-track { background: #131313; }
+      ::-webkit-scrollbar-thumb { background: #424753; }
+      .cursor-pulse {
+        animation: pulse 1s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+      }
+      @keyframes pulse {
+        0%, 100% { opacity: 1; }
+        50% { opacity: 0; }
+      }
+    </style>
+</head>
+<body class="bg-background text-on-surface font-body selection:bg-primary/30">
+<!-- TopAppBar -->
+<header class="bg-[#131313] font-['Space_Grotesk'] lowercase tracking-tighter docked full-width top-0 border-b border-white/15 flex justify-between items-center w-full px-6 py-3 fixed z-50">
+<div class="text-lg font-bold text-blue-500 hover:text-blue-400">terminal_portfolio_v1.0.4</div>
+<nav class="hidden md:flex items-center space-x-8">
+<a class="text-gray-500 hover:text-blue-300 transition-colors" href="#">root</a>
+<a class="text-gray-500 hover:text-blue-300 transition-colors" href="#">projects</a>
+<a class="text-gray-500 hover:text-blue-300 transition-colors" href="#">stack</a>
+<a class="text-blue-400 border-b-2 border-blue-500 pb-1" href="#">logs</a>
+</nav>
+<div class="flex items-center space-x-3">
+<span class="material-symbols-outlined text-tertiary text-xs opacity-50">minimize</span>
+<span class="material-symbols-outlined text-primary text-xs opacity-50">fullscreen</span>
+<span class="material-symbols-outlined text-secondary text-xs opacity-50">close</span>
+</div>
+</header>
+<main class="pt-24 pb-32 px-6 max-w-7xl mx-auto space-y-24">
+<!-- Hero / whoami section -->
+<section class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
+<div class="lg:col-span-8 space-y-6">
+<div class="flex items-center space-x-2 text-primary font-label uppercase tracking-widest text-sm mb-4">
+<span class="material-symbols-outlined text-base">person</span>
+<span>process: whoami</span>
+</div>
+<h1 class="font-headline text-5xl md:text-7xl lowercase leading-tight tracking-tighter">
+                    new grad <span class="text-primary">software developer</span> bridging the gap between logic and user experience.
+                </h1>
+<div class="bg-surface-container-low border border-white/5 p-8 space-y-4">
+<div class="flex items-center space-x-2 font-label text-sm text-secondary">
+<span>$</span>
+<span>cat bio.md</span>
+</div>
+<p class="text-on-surface-variant leading-relaxed text-lg max-w-2xl">
+                        Recent Computer Science graduate specializing in distributed systems and modern frontend architectures. During my university tenure, I architected a low-latency microservices platform for peer-to-peer resource sharing, reducing overhead by 40%.
+                    </p>
+<p class="text-on-surface-variant leading-relaxed text-lg max-w-2xl">
+                        My career goal is to engineer resilient infrastructure that powers the next generation of collaborative tools. Currently seeking opportunities to contribute to high-impact open source projects and scalable enterprise solutions.
+                    </p>
+<div class="flex items-center space-x-1">
+<div class="w-2.5 h-5 bg-secondary cursor-pulse"></div>
+</div>
+</div>
+</div>
+<aside class="lg:col-span-4 space-y-8">
+<div class="bg-surface-container-highest/30 p-6 border border-white/5">
+<h3 class="font-headline text-xl lowercase text-primary mb-6">system_status</h3>
+<ul class="space-y-4 font-label text-sm uppercase tracking-wider">
+<li class="flex justify-between border-b border-white/5 pb-2">
+<span class="text-on-surface-variant">Degree</span>
+<span class="text-on-surface">B.Sc. Comp Sci</span>
+</li>
+<li class="flex justify-between border-b border-white/5 pb-2">
+<span class="text-on-surface-variant">Uptime</span>
+<span class="text-on-surface">22 Years</span>
+</li>
+<li class="flex justify-between border-b border-white/5 pb-2">
+<span class="text-on-surface-variant">Location</span>
+<span class="text-on-surface">Remote / GMT-5</span>
+</li>
+<li class="flex justify-between">
+<span class="text-on-surface-variant">Availability</span>
+<span class="text-secondary">Ready for hire</span>
+</li>
+</ul>
+</div>
+</aside></section>
+<!-- Technical Skills / ls -R -->
+<section class="space-y-12">
+<div class="flex items-center space-x-4">
+<div class="h-px bg-outline-variant/30 flex-grow"></div>
+<h2 class="font-headline text-3xl lowercase flex-shrink-0">ls -R /tech_stack</h2>
+<div class="h-px bg-outline-variant/30 flex-grow"></div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-1">
+<!-- Frontend -->
+<div class="bg-surface-container-low p-8 border border-white/5 group hover:bg-surface-container-high transition-colors">
+<div class="flex items-center space-x-2 text-primary mb-6">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">folder</span>
+<span class="font-label text-sm uppercase tracking-widest">frontend/</span>
+</div>
+<div class="space-y-3 font-label text-sm">
+<div class="flex items-center space-x-3 text-on-surface-variant">
+<span class="text-xs opacity-30">01</span>
+<span>react_18.tsx</span>
+</div>
+<div class="flex items-center space-x-3 text-on-surface-variant">
+<span class="text-xs opacity-30">02</span>
+<span>tailwind_css.config</span>
+</div>
+<div class="flex items-center space-x-3 text-secondary">
+<span class="text-xs opacity-30">03</span>
+<span>typescript_strict.ts</span>
+</div>
+<div class="flex items-center space-x-3 text-on-surface-variant">
+<span class="text-xs opacity-30">04</span>
+<span>next_js.app</span>
+</div>
+</div>
+</div>
+<!-- Backend -->
+<div class="bg-surface-container-low p-8 border border-white/5 group hover:bg-surface-container-high transition-colors">
+<div class="flex items-center space-x-2 text-primary mb-6">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">folder</span>
+<span class="font-label text-sm uppercase tracking-widest">backend/</span>
+</div>
+<div class="space-y-3 font-label text-sm">
+<div class="flex items-center space-x-3 text-on-surface-variant">
+<span class="text-xs opacity-30">01</span>
+<span>node_runtime.bin</span>
+</div>
+<div class="flex items-center space-x-3 text-secondary">
+<span class="text-xs opacity-30">02</span>
+<span>rust_engine.rs</span>
+</div>
+<div class="flex items-center space-x-3 text-on-surface-variant">
+<span class="text-xs opacity-30">03</span>
+<span>postgresql.sql</span>
+</div>
+<div class="flex items-center space-x-3 text-on-surface-variant">
+<span class="text-xs opacity-30">04</span>
+<span>redis_cache.v8</span>
+</div>
+</div>
+</div>
+<!-- DevOps -->
+<div class="bg-surface-container-low p-8 border border-white/5 group hover:bg-surface-container-high transition-colors">
+<div class="flex items-center space-x-2 text-primary mb-6">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">folder</span>
+<span class="font-label text-sm uppercase tracking-widest">infrastructure/</span>
+</div>
+<div class="space-y-3 font-label text-sm">
+<div class="flex items-center space-x-3 text-on-surface-variant">
+<span class="text-xs opacity-30">01</span>
+<span>docker_compose.yml</span>
+</div>
+<div class="flex items-center space-x-3 text-on-surface-variant">
+<span class="text-xs opacity-30">02</span>
+<span>kubernetes.cluster</span>
+</div>
+<div class="flex items-center space-x-3 text-on-surface-variant">
+<span class="text-xs opacity-30">03</span>
+<span>aws_lambda.func</span>
+</div>
+<div class="flex items-center space-x-3 text-secondary">
+<span class="text-xs opacity-30">04</span>
+<span>github_actions.ci</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Contact Section / contact.sh -->
+<section class="grid grid-cols-1 lg:grid-cols-2 gap-0 border border-white/5">
+<div class="bg-surface-container-lowest p-12 lg:border-r border-white/5">
+<div class="mb-12">
+<div class="flex items-center space-x-2 text-tertiary font-label uppercase tracking-widest text-xs mb-4">
+<span class="material-symbols-outlined text-sm">terminal</span>
+<span>sh contact.sh --init</span>
+</div>
+<h2 class="font-headline text-4xl lowercase mb-6">establish_connection</h2>
+<p class="text-on-surface-variant font-body">
+                        Interested in collaboration or hiring? Send a message through the terminal interface or use the direct protocols listed.
+                    </p>
+</div>
+<div class="space-y-8">
+<a class="flex items-center justify-between group p-4 border border-white/5 hover:bg-primary/5 transition-all" href="#">
+<div class="flex items-center space-x-4">
+<span class="material-symbols-outlined text-primary">mail</span>
+<span class="font-label text-sm uppercase tracking-widest">protocol: smtp</span>
+</div>
+<span class="text-primary opacity-0 group-hover:opacity-100 transition-opacity material-symbols-outlined">arrow_forward</span>
+</a>
+<a class="flex items-center justify-between group p-4 border border-white/5 hover:bg-primary/5 transition-all" href="#">
+<div class="flex items-center space-x-4">
+<span class="material-symbols-outlined text-primary">code</span>
+<span class="font-label text-sm uppercase tracking-widest">protocol: github</span>
+</div>
+<span class="text-primary opacity-0 group-hover:opacity-100 transition-opacity material-symbols-outlined">arrow_forward</span>
+</a>
+<a class="flex items-center justify-between group p-4 border border-white/5 hover:bg-primary/5 transition-all" href="#">
+<div class="flex items-center space-x-4">
+<span class="material-symbols-outlined text-primary">link</span>
+<span class="font-label text-sm uppercase tracking-widest">protocol: linkedin</span>
+</div>
+<span class="text-primary opacity-0 group-hover:opacity-100 transition-opacity material-symbols-outlined">arrow_forward</span>
+</a>
+</div>
+</div>
+<div class="bg-surface-container-low p-12">
+<form class="space-y-8">
+<div class="space-y-2">
+<label class="block font-label text-xs uppercase text-on-surface-variant tracking-widest">user_identity</label>
+<div class="flex items-center border-b border-outline-variant focus-within:border-primary transition-colors py-2">
+<span class="text-primary mr-3">$</span>
+<input class="bg-transparent border-none focus:ring-0 w-full p-0 text-on-surface placeholder:text-surface-container-highest" placeholder="name or organization..." type="text"/>
+</div>
+</div>
+<div class="space-y-2">
+<label class="block font-label text-xs uppercase text-on-surface-variant tracking-widest">return_address</label>
+<div class="flex items-center border-b border-outline-variant focus-within:border-primary transition-colors py-2">
+<span class="text-primary mr-3">$</span>
+<input class="bg-transparent border-none focus:ring-0 w-full p-0 text-on-surface placeholder:text-surface-container-highest" placeholder="email@domain.com" type="email"/>
+</div>
+</div>
+<div class="space-y-2">
+<label class="block font-label text-xs uppercase text-on-surface-variant tracking-widest">payload_content</label>
+<div class="flex items-start border-b border-outline-variant focus-within:border-primary transition-colors py-2">
+<span class="text-primary mr-3 mt-1">$</span>
+<textarea class="bg-transparent border-none focus:ring-0 w-full p-0 text-on-surface placeholder:text-surface-container-highest resize-none" placeholder="type your message here..." rows="4"></textarea>
+</div>
+</div>
+<button class="w-full bg-primary text-on-primary font-label uppercase tracking-widest text-sm py-4 hover:opacity-90 active:scale-[0.98] transition-all flex items-center justify-center space-x-2" type="submit">
+<span>execute contact.sh</span>
+<span class="material-symbols-outlined text-sm">send</span>
+</button>
+</form>
+</div>
+</section>
+</main>
+<!-- BottomNavBar -->
+<nav class="fixed bottom-0 left-0 w-full z-50 flex justify-center space-x-8 items-center px-4 h-16 bg-[#0e0e0e]/90 backdrop-blur-xl border-t border-white/10 shadow-[0_-4px_20px_rgba(66,133,244,0.1)]">
+<a class="flex flex-col items-center justify-center text-gray-600 px-6 py-2 hover:bg-white/5 hover:text-green-300" href="#">
+<span class="material-symbols-outlined">terminal</span>
+<span class="font-['Space_Grotesk'] text-xs uppercase tracking-widest">execute</span>
+</a>
+<a class="flex flex-col items-center justify-center text-gray-600 px-6 py-2 hover:bg-white/5 hover:text-green-300" href="#">
+<span class="material-symbols-outlined">arrow_upward</span>
+<span class="font-['Space_Grotesk'] text-xs uppercase tracking-widest">cd ..</span>
+</a>
+<a class="flex flex-col items-center justify-center text-gray-600 px-6 py-2 hover:bg-white/5 hover:text-green-300" href="#">
+<span class="material-symbols-outlined">lock</span>
+<span class="font-['Space_Grotesk'] text-xs uppercase tracking-widest">sudo</span>
+</a>
+<a class="flex flex-col items-center justify-center bg-green-500/10 text-green-400 rounded-none px-6 py-2 border-l-2 border-green-500 transition-all" href="#">
+<span class="material-symbols-outlined">help_center</span>
+<span class="font-['Space_Grotesk'] text-xs uppercase tracking-widest">man</span>
+</a>
+</nav>
+</body></html>

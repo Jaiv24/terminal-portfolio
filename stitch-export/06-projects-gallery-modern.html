@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>terminal_portfolio_v2.0.1 - Projects</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;family=Inter:wght@300;400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "secondary-container": "#30a550",
+              "secondary-fixed-dim": "#6ddd81",
+              "on-error": "#690005",
+              "on-background": "#e5e2e1",
+              "on-secondary-fixed-variant": "#005320",
+              "inverse-surface": "#e5e2e1",
+              "on-surface-variant": "#c2c6d5",
+              "on-primary-container": "#00285c",
+              "surface-dim": "#131313",
+              "on-tertiary-fixed-variant": "#5c4300",
+              "inverse-primary": "#005ac1",
+              "on-error-container": "#ffdad6",
+              "surface-container-low": "#1c1b1b",
+              "outline-variant": "#424753",
+              "on-secondary-container": "#003210",
+              "on-tertiary": "#402d00",
+              "error": "#ffb4ab",
+              "primary-container": "#4d8efe",
+              "background": "#131313",
+              "tertiary-fixed-dim": "#fbbc05",
+              "on-tertiary-container": "#372700",
+              "tertiary-fixed": "#ffdfa0",
+              "surface-bright": "#393939",
+              "primary": "#adc6ff",
+              "surface-tint": "#adc6ff",
+              "on-secondary": "#003914",
+              "surface": "#131313",
+              "primary-fixed-dim": "#adc6ff",
+              "outline": "#8c909f",
+              "inverse-on-surface": "#313030",
+              "error-container": "#93000a",
+              "secondary": "#6ddd81",
+              "tertiary": "#fbbc05",
+              "on-tertiary-fixed": "#261a00",
+              "on-primary-fixed-variant": "#004494",
+              "secondary-fixed": "#89fa9b",
+              "on-primary": "#002e69",
+              "primary-fixed": "#d8e2ff",
+              "surface-container": "#201f1f",
+              "surface-container-lowest": "#0e0e0e",
+              "surface-container-high": "#2a2a2a",
+              "on-secondary-fixed": "#002108",
+              "surface-container-highest": "#353534",
+              "tertiary-container": "#b88900",
+              "surface-variant": "#353534",
+              "on-surface": "#e5e2e1",
+              "on-primary-fixed": "#001a41"
+            },
+            fontFamily: {
+              "headline": ["Space Grotesk"],
+              "body": ["Inter"],
+              "label": ["Space Grotesk"]
+            },
+            borderRadius: {"DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem"},
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            display: inline-block;
+            vertical-align: middle;
+        }
+        .glass-panel {
+            background: rgba(42, 42, 42, 0.85);
+            backdrop-filter: blur(20px);
+        }
+        body {
+            background-color: #131313;
+            color: #e5e2e1;
+            font-family: 'Inter', sans-serif;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-surface min-h-screen pb-24">
+<!-- TopNavBar -->
+<nav class="fixed top-0 left-0 z-50 flex justify-between items-center w-full px-6 h-16 bg-[#131313]">
+<div class="text-lg font-bold text-[#4285F4] dark:text-[#ADC6FF] font-['Space_Grotesk']">
+            terminal_portfolio_v2.0.1
+        </div>
+<div class="hidden md:flex gap-8 items-center">
+<a class="font-['Space_Grotesk'] tracking-tight text-sm uppercase text-[#C2C6D5] hover:text-[#4285F4] transition-colors duration-200" href="#">root</a>
+<a class="font-['Space_Grotesk'] tracking-tight text-sm uppercase text-[#ADC6FF] border-b-2 border-[#4285F4] pb-1" href="#">projects</a>
+<a class="font-['Space_Grotesk'] tracking-tight text-sm uppercase text-[#C2C6D5] hover:text-[#4285F4] transition-colors duration-200" href="#">stack</a>
+<a class="font-['Space_Grotesk'] tracking-tight text-sm uppercase text-[#C2C6D5] hover:text-[#4285F4] transition-colors duration-200" href="#">logs</a>
+</div>
+<div class="flex items-center gap-4">
+<span class="font-['Space_Grotesk'] text-xs text-[#ADC6FF] border border-[#ADC6FF]/30 px-2 py-1 rounded-sm uppercase">SYSTEM: OPTIMAL</span>
+</div>
+</nav>
+<main class="pt-24 px-6 md:px-12 max-w-7xl mx-auto">
+<!-- Header Section -->
+<header class="mb-12">
+<div class="flex items-center gap-2 mb-2">
+<span class="text-secondary font-label text-sm">guest@kernel:~$</span>
+<h1 class="font-headline text-primary text-xl md:text-2xl font-bold tracking-tight uppercase">ls ./projects --all</h1>
+</div>
+<p class="font-body text-on-surface-variant max-w-2xl text-sm md:text-base">
+                An archive of technical implementations, academic research, and engineering experiments. Highlighting efficiency through modern syntax.
+            </p>
+</header>
+<!-- Projects Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+<!-- Project Card 1: Distributed Systems -->
+<div class="group flex flex-col bg-surface-container-low rounded-sm overflow-hidden transition-all duration-300 hover:bg-surface-container-high relative">
+<div class="h-48 w-full bg-surface-container-highest overflow-hidden relative">
+<img class="w-full h-full object-cover opacity-60 group-hover:scale-105 transition-transform duration-500" data-alt="Abstract visualization of distributed network nodes and connections" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDllVekDccxz3lMJfCLQyPyeG0iZqG1Asz9v_jq51c6oG7ROTxVJVqUhAvOsKBhUFEILiSVPRW9xHVtOrcBikUyf4Oo6sA5RV_nRRh7z4-uTP_lAoCyUJhGlNXDrgMlSUHbs51RvKVa8TLgmb1PZ0_zsQ64yLOe4Begp2lNzg-IfKLNncyyvZTXl0K9OFZPyGYUzhrHGeZbs1vn7d6p5oJpTNgwv42WqRDvaNS6NpkHjC2-xysf-cDK1ow0hRjesSoBUOwQvH34l48"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container-low to-transparent"></div>
+<div class="absolute bottom-4 left-4">
+<span class="bg-secondary/10 text-secondary font-label text-[10px] px-2 py-1 uppercase tracking-wider rounded-sm border border-secondary/20">internship_final_v1</span>
+</div>
+</div>
+<div class="p-6 flex flex-col flex-grow">
+<div class="flex justify-between items-start mb-3">
+<h3 class="font-headline text-lg font-bold text-on-surface group-hover:text-primary transition-colors">Distributed File Ledger</h3>
+<span class="material-symbols-outlined text-outline text-sm">terminal</span>
+</div>
+<p class="font-body text-on-surface-variant text-sm mb-6 leading-relaxed">
+                        A peer-to-peer file distribution protocol optimized for high-latency connections. Implemented during my 2023 Summer Internship.
+                    </p>
+<div class="flex flex-wrap gap-2 mb-8 mt-auto">
+<span class="font-label text-[10px] text-primary border border-primary/20 px-2 py-0.5 uppercase">Rust</span>
+<span class="font-label text-[10px] text-primary border border-primary/20 px-2 py-0.5 uppercase">gRPC</span>
+<span class="font-label text-[10px] text-primary border border-primary/20 px-2 py-0.5 uppercase">Docker</span>
+</div>
+<div class="grid grid-cols-2 gap-3">
+<button class="flex items-center justify-center gap-2 py-2 bg-primary text-on-primary font-label text-xs font-bold rounded-sm uppercase tracking-widest hover:brightness-110 active:scale-95 transition-all">
+<span class="material-symbols-outlined text-sm">code</span> GITHUB
+                        </button>
+<button class="flex items-center justify-center gap-2 py-2 bg-surface-container-highest text-primary font-label text-xs font-bold rounded-sm uppercase tracking-widest hover:bg-surface-variant active:scale-95 transition-all">
+<span class="material-symbols-outlined text-sm">open_in_new</span> LIVE DEMO
+                        </button>
+</div>
+</div>
+</div>
+<!-- Project Card 2: Computer Vision -->
+<div class="group flex flex-col bg-surface-container-low rounded-sm overflow-hidden transition-all duration-300 hover:bg-surface-container-high relative">
+<div class="h-48 w-full bg-surface-container-highest overflow-hidden relative">
+<img class="w-full h-full object-cover opacity-60 group-hover:scale-105 transition-transform duration-500" data-alt="Digital circuit lines and glowing light patterns" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBQh2iaUrpYv6ysxoaalS2Gw_vtLGj2rfSuQeAuUe5oyuhmKLfg0oJod7W8sOa9q0qoRklTFJ-I1iybAd4-E4panbegdUqnHEjPNaGYO5b_Zqlpy5-MD-NSZqsaGd0fJgRG9hw4qbFD1ofq-LT6Ad3XxU8x9uw9vLAzl--7rLeJTimW0klUyDcZdJkP7yA8j7qLZZnP5FiJveTnhApYN_g2XI6P9nNH2N7peBMN3Pqm0FdMjX47MCZn0CJ-Kv5GXgAGC3LyRRdkCRQ"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container-low to-transparent"></div>
+<div class="absolute bottom-4 left-4">
+<span class="bg-tertiary/10 text-tertiary font-label text-[10px] px-2 py-1 uppercase tracking-wider rounded-sm border border-tertiary/20">academic_capstone</span>
+</div>
+</div>
+<div class="p-6 flex flex-col flex-grow">
+<div class="flex justify-between items-start mb-3">
+<h3 class="font-headline text-lg font-bold text-on-surface group-hover:text-primary transition-colors">Neural Sight Pipeline</h3>
+<span class="material-symbols-outlined text-outline text-sm">visibility</span>
+</div>
+<p class="font-body text-on-surface-variant text-sm mb-6 leading-relaxed">
+                        Real-time spatial mapping for low-cost hardware. Developed as my senior thesis focusing on edge-computing efficiency.
+                    </p>
+<div class="flex flex-wrap gap-2 mb-8 mt-auto">
+<span class="font-label text-[10px] text-primary border border-primary/20 px-2 py-0.5 uppercase">C++</span>
+<span class="font-label text-[10px] text-primary border border-primary/20 px-2 py-0.5 uppercase">OpenCV</span>
+<span class="font-label text-[10px] text-primary border border-primary/20 px-2 py-0.5 uppercase">CUDA</span>
+</div>
+<div class="grid grid-cols-2 gap-3">
+<button class="flex items-center justify-center gap-2 py-2 bg-primary text-on-primary font-label text-xs font-bold rounded-sm uppercase tracking-widest hover:brightness-110 active:scale-95 transition-all">
+<span class="material-symbols-outlined text-sm">code</span> GITHUB
+                        </button>
+<button class="flex items-center justify-center gap-2 py-2 bg-surface-container-highest text-primary font-label text-xs font-bold rounded-sm uppercase tracking-widest hover:bg-surface-variant active:scale-95 transition-all">
+<span class="material-symbols-outlined text-sm">open_in_new</span> LIVE DEMO
+                        </button>
+</div>
+</div>
+</div>
+<!-- Project Card 3: Full Stack -->
+<div class="group flex flex-col bg-surface-container-low rounded-sm overflow-hidden transition-all duration-300 hover:bg-surface-container-high relative">
+<div class="h-48 w-full bg-surface-container-highest overflow-hidden relative">
+<img class="w-full h-full object-cover opacity-60 group-hover:scale-105 transition-transform duration-500" data-alt="Modern code editor displaying high level syntax" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCafhEv6zHuLfuRROBNm7ETN8rDQhbsU_WUdQj2PZ1oF_t9e7jWKJRWgwA-7U6Lgl-A5qw6wtKv8sdziqOwP-W_c2FFIcIP-yPKPqztAg3057lKyzgCk-SEkTM4NHuvkd8I-T5gyoWpWljutbOp9fC0iTZ4Dr0J6We5Bc61iBAaqMd4v2MWDVchRBKGypti9dL8hD04froZF542OcbXdV1PDjh0ogQ9kMOWUshvvcFGw1l7OhVctLsFqYEJnvaDJQFcWX2IirtokIo"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container-low to-transparent"></div>
+<div class="absolute bottom-4 left-4">
+<span class="bg-primary/10 text-primary font-label text-[10px] px-2 py-1 uppercase tracking-wider rounded-sm border border-primary/20">side_quest</span>
+</div>
+</div>
+<div class="p-6 flex flex-col flex-grow">
+<div class="flex justify-between items-start mb-3">
+<h3 class="font-headline text-lg font-bold text-on-surface group-hover:text-primary transition-colors">Talent Console 1.0</h3>
+<span class="material-symbols-outlined text-outline text-sm">dashboard</span>
+</div>
+<p class="font-body text-on-surface-variant text-sm mb-6 leading-relaxed">
+                        A recruitment-focused dashboard for managing engineering applicants using automated technical screening.
+                    </p>
+<div class="flex flex-wrap gap-2 mb-8 mt-auto">
+<span class="font-label text-[10px] text-primary border border-primary/20 px-2 py-0.5 uppercase">React</span>
+<span class="font-label text-[10px] text-primary border border-primary/20 px-2 py-0.5 uppercase">Node.js</span>
+<span class="font-label text-[10px] text-primary border border-primary/20 px-2 py-0.5 uppercase">Postgres</span>
+</div>
+<div class="grid grid-cols-2 gap-3">
+<button class="flex items-center justify-center gap-2 py-2 bg-primary text-on-primary font-label text-xs font-bold rounded-sm uppercase tracking-widest hover:brightness-110 active:scale-95 transition-all">
+<span class="material-symbols-outlined text-sm">code</span> GITHUB
+                        </button>
+<button class="flex items-center justify-center gap-2 py-2 bg-surface-container-highest text-primary font-label text-xs font-bold rounded-sm uppercase tracking-widest hover:bg-surface-variant active:scale-95 transition-all">
+<span class="material-symbols-outlined text-sm">open_in_new</span> LIVE DEMO
+                        </button>
+</div>
+</div>
+</div>
+<!-- Project Card 4: Hardware Integration -->
+<div class="group flex flex-col bg-surface-container-low rounded-sm overflow-hidden transition-all duration-300 hover:bg-surface-container-high relative">
+<div class="h-48 w-full bg-surface-container-highest overflow-hidden relative">
+<img class="w-full h-full object-cover opacity-60 group-hover:scale-105 transition-transform duration-500" data-alt="Microchip and electronic hardware close up" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBd6YUbgk7Ona6Heppq9EGf5NfU-lbWGXPUrxRSO_Mna3zLswPEQB1z8YooVlT3NhV6uEZCFrlLOEwb9ZpjWczjyI4akUstH29MWKe3eJg1wokxxwyU_n9x5CIjKl9Eljd2fyZ-7PS59PMywWksA9AGR5TnslnZep2jg9A25CxhGtH0au0XjTziibh6_8dS_m1UKhwhlGY8EepgrEyiFi4rjxyGTS60XjlRHpggP9fKdCDdt_ScF2vSGsP2aoyjEVN1nidIb-8EI0g"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container-low to-transparent"></div>
+<div class="absolute bottom-4 left-4">
+<span class="bg-secondary/10 text-secondary font-label text-[10px] px-2 py-1 uppercase tracking-wider rounded-sm border border-secondary/20">academic_lab</span>
+</div>
+</div>
+<div class="p-6 flex flex-col flex-grow">
+<div class="flex justify-between items-start mb-3">
+<h3 class="font-headline text-lg font-bold text-on-surface group-hover:text-primary transition-colors">Kernel IO Driver</h3>
+<span class="material-symbols-outlined text-outline text-sm">memory</span>
+</div>
+<p class="font-body text-on-surface-variant text-sm mb-6 leading-relaxed">
+                        Low-level driver implementation for ARM-based thermal sensors. Focused on memory safety and interrupt handling.
+                    </p>
+<div class="flex flex-wrap gap-2 mb-8 mt-auto">
+<span class="font-label text-[10px] text-primary border border-primary/20 px-2 py-0.5 uppercase">C</span>
+<span class="font-label text-[10px] text-primary border border-primary/20 px-2 py-0.5 uppercase">Assembly</span>
+<span class="font-label text-[10px] text-primary border border-primary/20 px-2 py-0.5 uppercase">ARM</span>
+</div>
+<div class="grid grid-cols-2 gap-3">
+<button class="flex items-center justify-center gap-2 py-2 bg-primary text-on-primary font-label text-xs font-bold rounded-sm uppercase tracking-widest hover:brightness-110 active:scale-95 transition-all">
+<span class="material-symbols-outlined text-sm">code</span> GITHUB
+                        </button>
+<button class="flex items-center justify-center gap-2 py-2 bg-surface-container-highest text-primary font-label text-xs font-bold rounded-sm uppercase tracking-widest hover:bg-surface-variant active:scale-95 transition-all">
+<span class="material-symbols-outlined text-sm">open_in_new</span> LIVE DEMO
+                        </button>
+</div>
+</div>
+</div>
+<!-- Project Card 5: Automation Scripts -->
+<div class="group flex flex-col bg-surface-container-low rounded-sm overflow-hidden transition-all duration-300 hover:bg-surface-container-high relative">
+<div class="h-48 w-full bg-surface-container-highest overflow-hidden relative">
+<img class="w-full h-full object-cover opacity-60 group-hover:scale-105 transition-transform duration-500" data-alt="Binary code falling like rain on dark background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA11H0xecBJ1gQZ1flJrkFyvzrE1K_CW1oMBzBmc4XdrwUhAovRqywEhaz13JktSNryXidfQwwck6RNajZsvX_uCHuNo_zsIApFS69fqg-lRCUCsVf_4cgHZ_yqelYd3COaUnVsVJReSfSMuZg0BSwNYDTS465K2Th2xz0uCt7_GbioWXv1enJdnFJvwxPwqDTd3L0nxr6-ckjpXJ5BWs7nX4nhmGyj9pJPSvxfNRb3M4DtteZuKp3Dvwj4xYl6CaAijOPDTFzGJsk"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container-low to-transparent"></div>
+<div class="absolute bottom-4 left-4">
+<span class="bg-error/10 text-error font-label text-[10px] px-2 py-1 uppercase tracking-wider rounded-sm border border-error/20">shell_utility</span>
+</div>
+</div>
+<div class="p-6 flex flex-col flex-grow">
+<div class="flex justify-between items-start mb-3">
+<h3 class="font-headline text-lg font-bold text-on-surface group-hover:text-primary transition-colors">Auto-Deploy Suite</h3>
+<span class="material-symbols-outlined text-outline text-sm">auto_mode</span>
+</div>
+<p class="font-body text-on-surface-variant text-sm mb-6 leading-relaxed">
+                        A collection of bash and python scripts to automate multi-container orchestration and health monitoring.
+                    </p>
+<div class="flex flex-wrap gap-2 mb-8 mt-auto">
+<span class="font-label text-[10px] text-primary border border-primary/20 px-2 py-0.5 uppercase">Bash</span>
+<span class="font-label text-[10px] text-primary border border-primary/20 px-2 py-0.5 uppercase">Python</span>
+<span class="font-label text-[10px] text-primary border border-primary/20 px-2 py-0.5 uppercase">Linux</span>
+</div>
+<div class="grid grid-cols-2 gap-3">
+<button class="flex items-center justify-center gap-2 py-2 bg-primary text-on-primary font-label text-xs font-bold rounded-sm uppercase tracking-widest hover:brightness-110 active:scale-95 transition-all">
+<span class="material-symbols-outlined text-sm">code</span> GITHUB
+                        </button>
+<button class="flex items-center justify-center gap-2 py-2 bg-surface-container-highest text-primary font-label text-xs font-bold rounded-sm uppercase tracking-widest hover:bg-surface-variant active:scale-95 transition-all">
+<span class="material-symbols-outlined text-sm">open_in_new</span> LIVE DEMO
+                        </button>
+</div>
+</div>
+</div>
+<!-- Empty Shell Slot -->
+<div class="flex flex-col border-2 border-dashed border-outline-variant/30 rounded-sm items-center justify-center p-12 text-center opacity-40 hover:opacity-100 transition-opacity">
+<span class="material-symbols-outlined text-4xl mb-4">add_circle</span>
+<p class="font-label text-xs uppercase tracking-widest">mkdir new_project</p>
+<p class="font-body text-[10px] mt-2 text-on-surface-variant italic">Next deployment pending...</p>
+</div>
+</div>
+</main>
+<!-- BottomNavBar -->
+<footer class="fixed bottom-0 left-0 w-full flex justify-center gap-8 items-center py-3 bg-[#1C1B1B]/85 backdrop-blur-xl border-t border-[#424753]/15 shadow-[0_-4px_20px_0_rgba(0,0,0,0.4)] z-50">
+<a class="flex flex-col items-center justify-center text-[#C2C6D5] px-6 py-2 hover:bg-[#353534] hover:text-[#6DDD81] transition-transform active:translate-y-0.5" href="#">
+<span class="material-symbols-outlined mb-1" data-icon="terminal">terminal</span>
+<span class="font-['Space_Grotesk'] text-[10px] font-medium uppercase">execute</span>
+</a>
+<a class="flex flex-col items-center justify-center bg-[#2A2A2A] text-[#6DDD81] rounded-sm px-6 py-2 transition-transform active:translate-y-0.5" href="#">
+<span class="material-symbols-outlined mb-1" data-icon="folder_up">folder</span>
+<span class="font-['Space_Grotesk'] text-[10px] font-medium uppercase">cd ..</span>
+</a>
+<a class="flex flex-col items-center justify-center text-[#C2C6D5] px-6 py-2 hover:bg-[#353534] hover:text-[#6DDD81] transition-transform active:translate-y-0.5" href="#">
+<span class="material-symbols-outlined mb-1" data-icon="shield_person">shield_person</span>
+<span class="font-['Space_Grotesk'] text-[10px] font-medium uppercase">sudo</span>
+</a>
+<a class="flex flex-col items-center justify-center text-[#C2C6D5] px-6 py-2 hover:bg-[#353534] hover:text-[#6DDD81] transition-transform active:translate-y-0.5" href="#">
+<span class="material-symbols-outlined mb-1" data-icon="menu_book">menu_book</span>
+<span class="font-['Space_Grotesk'] text-[10px] font-medium uppercase">man</span>
+</a>
+</footer>
+</body></html>

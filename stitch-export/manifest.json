@@ -1,0 +1,53 @@
+{
+  "projectId": "2522649813461582868",
+  "fetchedAt": "2026-03-22T02:21:19.776Z",
+  "note": "Design System screens with asset-stub-assets-* IDs are not listed under this project via list_screens / get_screen (404). Export those from Stitch UI or link them to this project if they live elsewhere.",
+  "unresolvedStubs": [
+    {
+      "title": "Design System",
+      "id": "asset-stub-assets-210d5d0298be4eff859fa18da94343d9-1774144781862"
+    },
+    {
+      "title": "Design System",
+      "id": "asset-stub-assets-cf09f6240888415b9010c612d9d790e0-1774145050769"
+    }
+  ],
+  "screens": [
+    {
+      "title": "About & Contact",
+      "screenId": "1833488600384a219a745e11528d88df",
+      "slug": "04-about-contact",
+      "htmlDownloadUrl": "https://contribution.usercontent.google.com/download?c=CgthaWRhX2NvZGVmeBJ7Eh1hcHBfY29tcGFuaW9uX2dlbmVyYXRlZF9maWxlcxpaCiVodG1sXzg2MWYzZmM1NWZmZDQwZGRiYzdjMWNkNWJlOTQ2N2Y1EgsSBxC_n6mElBsYAZIBIwoKcHJvamVjdF9pZBIVQhMyNTIyNjQ5ODEzNDYxNTgyODY4&filename=&opi=89354086",
+      "screenshotDownloadUrl": "https://lh3.googleusercontent.com/aida/ADBb0ujSW45ZWJZJ9XZycACeon53v2z3EQRmthTLk3jjGtN4kNksNAUWfuYPpkFPCevSIPh8t6JSwTzZwqaV1Q12nryblClwxzI0bkWDKBmt6-2rMmGacX3tj2kbOtSs_LSxs4OXxTjMPAVwNHpHjkRRBqoEQgmehDqZJz6lIhz25sBgDvcWKpSTpQd3lrD7G2dVnj6TXmii30EFjz85N21LT5D-Zp9rsCH5CNRuyEAmF9up-3fwre8ruV7xLA",
+      "savedHtml": "04-about-contact.html",
+      "savedScreenshot": "04-about-contact.png"
+    },
+    {
+      "title": "Projects Gallery",
+      "screenId": "6f62b236f32d496bbf5d6a2925384fa3",
+      "slug": "03-projects-gallery",
+      "htmlDownloadUrl": "https://contribution.usercontent.google.com/download?c=CgthaWRhX2NvZGVmeBJ7Eh1hcHBfY29tcGFuaW9uX2dlbmVyYXRlZF9maWxlcxpaCiVodG1sXzkxZjQ4Zjg5YzYxNDQwZDg5YTMwMGIyMGRiYjA1NGM5EgsSBxC_n6mElBsYAZIBIwoKcHJvamVjdF9pZBIVQhMyNTIyNjQ5ODEzNDYxNTgyODY4&filename=&opi=89354086",
+      "screenshotDownloadUrl": "https://lh3.googleusercontent.com/aida/ADBb0ugEcMau6c84p_LTLHlDoB6krjIpfdeLc1gXUwetjsLcfhRZRbSF5xBrI5tMyJqIJDnOo26-I1lFt9vy921NDX1ovGel6UWkUZmhl5I8e2wxRJ-Kd6xpY3gpvS8vYp-8fKwTVLmy-jthxsRBEW6nAVZIMWE1TiGjcecIeBEKGrBYmEOdQ4h3gZxSmqUDrZafEmAByzmuQYjf5rNlpMtaawf42VpfrmfG8Grq54Xzad6EI5Rv3J4vFIfAFGc",
+      "savedHtml": "03-projects-gallery.html",
+      "savedScreenshot": "03-projects-gallery.png"
+    },
+    {
+      "title": "Modernized Projects Gallery",
+      "screenId": "fb160f80a42e4fdfb6a2c3f25a77b6b4",
+      "slug": "06-projects-gallery-modern",
+      "htmlDownloadUrl": "https://contribution.usercontent.google.com/download?c=CgthaWRhX2NvZGVmeBJ7Eh1hcHBfY29tcGFuaW9uX2dlbmVyYXRlZF9maWxlcxpaCiVodG1sXzA3YWFmYjZkZWIzYjRjNmI4MTlhZGU2Y2Q4N2M5MTlmEgsSBxC_n6mElBsYAZIBIwoKcHJvamVjdF9pZBIVQhMyNTIyNjQ5ODEzNDYxNTgyODY4&filename=&opi=89354086",
+      "screenshotDownloadUrl": "https://lh3.googleusercontent.com/aida/ADBb0uiNMyy78QzRNA552E_QyNX3boOgKLoWnS1Aof26ZtKFLa-vzZ483CBIsk40EAB5Ap24zZ1ZU9H6ATZbh6yCI_PUFvrWqGA3GpM51Qs6ScFpitvq2Nn73Wa2YunRioVSKDFC4GXLq3SU78IWqGbkvH0FeA7gnjeyhYYHlYUE-knPp0izEtX6vnbpJ9TZqZGovgb356_vYgLiAWUlIh0ra0QAnH2kPxggtbLL2f-dFu7yPgzSgqmUvuOJyg",
+      "savedHtml": "06-projects-gallery-modern.html",
+      "savedScreenshot": "06-projects-gallery-modern.png"
+    },
+    {
+      "title": "Landing Page",
+      "screenId": "267a5dd4124242ec959fcda7988a0f19",
+      "slug": "02-landing-page",
+      "htmlDownloadUrl": "https://contribution.usercontent.google.com/download?c=CgthaWRhX2NvZGVmeBJ7Eh1hcHBfY29tcGFuaW9uX2dlbmVyYXRlZF9maWxlcxpaCiVodG1sX2QzN2FiZTcxY2EwYjRmMDZhYmRhOTc5Y2Y2NzAwMjdiEgsSBxC_n6mElBsYAZIBIwoKcHJvamVjdF9pZBIVQhMyNTIyNjQ5ODEzNDYxNTgyODY4&filename=&opi=89354086",
+      "screenshotDownloadUrl": "https://lh3.googleusercontent.com/aida/ADBb0ugQjKOyH1tqXpVbpqDC2cTGK08r3BY1ZsvV90UwaE5TDY6xmJDqltGFn5HSfonJdIRzzZ1KUYx89OXpiv_XOgehh5GnwYzVGEvK373ObMijueS4Kbal5eUMgsYhon4Yjio2yCiseYjRK5kBWSN_iPLwEYp6Llof7NXYmrLjKihXqihX1sY_3Hh5C0QYfq4KBDKeRMPVOh3ZcibDgy9QmUK9HzHYqmWQfEldtY2BFqcI-2YViToDC5XzyNs",
+      "savedHtml": "02-landing-page.html",
+      "savedScreenshot": "02-landing-page.png"
+    }
+  ]
+}
