@@ -103,7 +103,7 @@
     }
 
     *, *::before, *::after { box-sizing: border-box; }
-    html { scroll-behavior: smooth; }
+    html { scroll-behavior: smooth; zoom: 1.1; }
     body {
       margin: 0;
       min-height: 100vh;
@@ -523,7 +523,10 @@
       border: 1px solid rgba(255, 255, 255, 0.06);
     }
     @media (min-width: 768px) {
-      .fs-grid { grid-template-columns: repeat(3, 1fr); }
+      .fs-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+    @media (min-width: 1100px) {
+      .fs-grid { grid-template-columns: repeat(4, 1fr); }
     }
     .fs-col {
       background: var(--bg-low);
@@ -1209,7 +1212,7 @@
           <div class="bio-panel">
             <div class="bio-cmd"><span>$</span> cat bio.md</div>
             <p>
-              I translate complex technical problems into scalable cloud and AI solutions that drive real adoption. I've shipped production features at <strong style="color:var(--text)">Auvik Networks</strong>, built GCP backends at <strong style="color:var(--text)">Auticon</strong>, and I care about making technology work for the people using it.
+              I translate complex technical problems into scalable AWS-backed cloud and AI solutions that drive real adoption. I've shipped production features at <strong style="color:var(--text)">Auvik Networks</strong>, provisioned Terraform + AWS infrastructure at <strong style="color:var(--text)">Auticon</strong>, and I care about making technology work for the people using it.
             </p>
             <p>
               Toronto, ON · <a class="inline-link" href="https://www.jaivshah.site/" target="_blank" rel="noopener">jaivshah.site</a>
@@ -1235,28 +1238,41 @@
         <span class="p">jaiv@portfolio:~$</span>
         <span class="cmd">less ./experience.log</span>
       </div>
-      <p class="proj-sub">Production work across AI tooling, GraphQL microservices, GCP full-stack delivery, and test automation at scale.</p>
+      <p class="proj-sub">Production work across AI tooling, GraphQL microservices, AWS-provisioned full-stack delivery, and test automation at scale.</p>
       <div class="exp-block" style="margin-top:1.25rem">
         <article class="job">
           <div class="job-title">[1] Software Developer — Auvik Networks</div>
           <div class="job-meta">Sept 2025 – Present · Remote</div>
           <ul>
-            <li>Built an AI-powered Slack assistant using LangGraph + OpenAI API with a RAG pipeline (Pinecone vector DB) — eliminated hours of manual Slack searching for engineering teams</li>
-            <li>Reduced API response time 40% by migrating REST → GraphQL (Apollo Server, schema stitching across 3+ microservices)</li>
-            <li>Cut read latency 35% using CQRS + gRPC + Go in a multi-tenant microservice</li>
-            <li>Shipped reusable React/TypeScript component library (Hooks, Context, Storybook) used across product teams</li>
-            <li>Automated Helm + Kubernetes deployment pipelines, streamlining CI/CD workflows</li>
+            <li>Design and build Auvik's event-driven alerting platform — alert generation, triggering, notification delivery, dismissal/clearing, and read-model updates across distributed Go services</li>
+            <li>Own Alert Insights: turning raw alert streams into severity analysis, resolution metrics, baselines, and trend reporting for managed service providers</li>
+            <li>Led Notification V2 — a Kafka-backed, collection-based state machine that replaced ad hoc alert handling with an auditable event-driven lifecycle</li>
+            <li>Ship backend services and APIs in Go across gRPC, GraphQL, REST, and Protocol Buffers, then wire them into GraphQL resolvers and React/TypeScript UI so alert data reads correctly end-to-end</li>
+            <li>On-call debugging across Kafka consumers, Kubernetes/Helm workloads, Datadog metrics, and persisted collection data — usually the one tracing a bad alert back to the event that caused it</li>
+            <li>Prototype internal AI tooling with Python, FastAPI, LangGraph, and OpenAI APIs, including a Slack-integrated agent over vector search</li>
           </ul>
+          <div class="proj-card__actions proj-card__actions--single" style="margin-top:0.75rem">
+            <button type="button" class="proj-btn proj-btn--ghost js-proj-detail-toggle" aria-expanded="false" aria-controls="auvik-detail" data-label-open="Hide details" data-label-closed="How Notification V2 works">
+              How Notification V2 works
+            </button>
+          </div>
+          <div class="proj-detail" id="auvik-detail" role="region" aria-label="Notification V2 alerting architecture at Auvik">
+            <p><strong>Problem:</strong> the legacy Core Events pipeline fired alerts as fire-and-forget messages — no durable state, so knowing whether an alert was still active, already dismissed, or auto-cleared meant re-deriving it from scattered service logs. That made resolution metrics and trend reporting unreliable.</p>
+            <p><strong>Design:</strong> Notification V2 models each alert as a stateful entity backed by a Kafka-driven event log. Triggering, dismissal, clearing, and read-model updates are all separate events consumed by dedicated Go services, with collection-based state management persisting the current status instead of inferring it after the fact.</p>
+            <p><strong>Backward compatibility:</strong> Core Events was still in production for other consumers, so dismissal and auto-clear logic had to stay correct for both architectures during the migration — no dual-write bugs, no alerts silently stuck open.</p>
+            <p><strong>Surface:</strong> the improved read models flow through gRPC/GraphQL services into resolvers consumed by the React/TypeScript alerting UI, and into Alert Insights for severity, resolution-time, and baseline/trend analysis MSPs use to prioritize what to fix first.</p>
+            <p><strong>Operating it:</strong> when something misbehaves in production, the trail runs through Kafka consumer lag, Kubernetes/Helm rollout state, Datadog dashboards, and the underlying Postgres/ClickHouse/Redis-backed collections — that's usually where the actual root cause shows up.</p>
+          </div>
         </article>
         <article class="job">
           <div class="job-title">[2] Full-Stack Developer — Auticon Canada</div>
           <div class="job-meta">April 2025 – Oct 2025 · Remote</div>
           <ul>
+            <li>Provisioned and managed cloud infrastructure with Terraform + AWS, implementing error handling, retry logic, and security rules across scalable backend services</li>
             <li>Owned full delivery of a location assessment service on Google Cloud Platform (GCP): Firebase Auth, Cloud Firestore, Cloud Functions — 99.9% uptime</li>
             <li>Reduced data fetch latency 40% via RxJS observables + optimized Firestore queries</li>
             <li>Achieved 60fps rendering with 1000+ concurrent map markers on mobile (viewport culling + requestAnimationFrame)</li>
             <li>Technical bridge between engineering and business stakeholders; onboarded and mentored junior developer</li>
-            <li>Infrastructure provisioned with Terraform + AWS</li>
           </ul>
         </article>
         <article class="job">
@@ -1421,11 +1437,19 @@
         </div>
         <div class="fs-col">
           <div class="fs-col__head"><span class="fs-icon">📁</span> infrastructure/</div>
-          <div class="fs-row"><span class="n">01</span> gcp_firebase.tf</div>
-          <div class="fs-row"><span class="n">02</span> kubernetes.helm</div>
-          <div class="fs-row is-hi"><span class="n">03</span> terraform_modules.hcl</div>
+          <div class="fs-row is-hi"><span class="n">01</span> aws_cloud.infra</div>
+          <div class="fs-row is-hi"><span class="n">02</span> terraform_modules.hcl</div>
+          <div class="fs-row"><span class="n">03</span> kubernetes.helm</div>
           <div class="fs-row"><span class="n">04</span> docker_compose.yml</div>
           <div class="fs-row"><span class="n">05</span> github_actions.ci</div>
+        </div>
+        <div class="fs-col">
+          <div class="fs-col__head"><span class="fs-icon">📁</span> data_observability/</div>
+          <div class="fs-row is-hi"><span class="n">01</span> postgresql.db</div>
+          <div class="fs-row"><span class="n">02</span> clickhouse.olap</div>
+          <div class="fs-row"><span class="n">03</span> redis.cache</div>
+          <div class="fs-row is-hi"><span class="n">04</span> datadog.metrics</div>
+          <div class="fs-row"><span class="n">05</span> event_driven.arch</div>
         </div>
       </div>
     </section>
