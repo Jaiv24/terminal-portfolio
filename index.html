@@ -1245,22 +1245,22 @@
           <div class="job-meta">Sept 2025 – Present · Remote</div>
           <ul>
             <li>Design and build Auvik's event-driven alerting platform — alert generation, triggering, notification delivery, dismissal/clearing, and read-model updates across distributed Go services</li>
-            <li>Own Alert Insights: turning raw alert streams into severity analysis, resolution metrics, baselines, and trend reporting for managed service providers</li>
-            <li>Led Notification V2 — a Kafka-backed, collection-based state machine that replaced ad hoc alert handling with an auditable event-driven lifecycle</li>
+            <li>Own alert reporting and analytics: turning raw alert streams into severity analysis, resolution metrics, baselines, and trend reporting for managed service providers</li>
+            <li>Led development of a modernized alert notification lifecycle system — a Kafka-backed, collection-based state machine that replaced ad hoc alert handling with an auditable event-driven lifecycle</li>
             <li>Ship backend services and APIs in Go across gRPC, GraphQL, REST, and Protocol Buffers, then wire them into GraphQL resolvers and React/TypeScript UI so alert data reads correctly end-to-end</li>
             <li>On-call debugging across Kafka consumers, Kubernetes/Helm workloads, Datadog metrics, and persisted collection data — usually the one tracing a bad alert back to the event that caused it</li>
             <li>Prototype internal AI tooling with Python, FastAPI, LangGraph, and OpenAI APIs, including a Slack-integrated agent over vector search</li>
           </ul>
           <div class="proj-card__actions proj-card__actions--single" style="margin-top:0.75rem">
-            <button type="button" class="proj-btn proj-btn--ghost js-proj-detail-toggle" aria-expanded="false" aria-controls="auvik-detail" data-label-open="Hide details" data-label-closed="How Notification V2 works">
-              How Notification V2 works
+            <button type="button" class="proj-btn proj-btn--ghost js-proj-detail-toggle" aria-expanded="false" aria-controls="auvik-detail" data-label-open="Hide details" data-label-closed="How the notification lifecycle system works">
+              How the notification lifecycle system works
             </button>
           </div>
-          <div class="proj-detail" id="auvik-detail" role="region" aria-label="Notification V2 alerting architecture at Auvik">
-            <p><strong>Problem:</strong> the legacy Core Events pipeline fired alerts as fire-and-forget messages — no durable state, so knowing whether an alert was still active, already dismissed, or auto-cleared meant re-deriving it from scattered service logs. That made resolution metrics and trend reporting unreliable.</p>
-            <p><strong>Design:</strong> Notification V2 models each alert as a stateful entity backed by a Kafka-driven event log. Triggering, dismissal, clearing, and read-model updates are all separate events consumed by dedicated Go services, with collection-based state management persisting the current status instead of inferring it after the fact.</p>
-            <p><strong>Backward compatibility:</strong> Core Events was still in production for other consumers, so dismissal and auto-clear logic had to stay correct for both architectures during the migration — no dual-write bugs, no alerts silently stuck open.</p>
-            <p><strong>Surface:</strong> the improved read models flow through gRPC/GraphQL services into resolvers consumed by the React/TypeScript alerting UI, and into Alert Insights for severity, resolution-time, and baseline/trend analysis MSPs use to prioritize what to fix first.</p>
+          <div class="proj-detail" id="auvik-detail" role="region" aria-label="Alerting architecture at Auvik">
+            <p><strong>Problem:</strong> the legacy alert event pipeline fired alerts as fire-and-forget messages — no durable state, so knowing whether an alert was still active, already dismissed, or auto-cleared meant re-deriving it from scattered service logs. That made resolution metrics and trend reporting unreliable.</p>
+            <p><strong>Design:</strong> the modernized system models each alert as a stateful entity backed by a Kafka-driven event log. Triggering, dismissal, clearing, and read-model updates are all separate events consumed by dedicated Go services, with collection-based state management persisting the current status instead of inferring it after the fact.</p>
+            <p><strong>Backward compatibility:</strong> the legacy pipeline was still in production for other consumers, so dismissal and auto-clear logic had to stay correct for both architectures during the migration — no dual-write bugs, no alerts silently stuck open.</p>
+            <p><strong>Surface:</strong> the improved read models flow through gRPC/GraphQL services into resolvers consumed by the React/TypeScript alerting UI, and into the alert reporting layer for severity, resolution-time, and baseline/trend analysis MSPs use to prioritize what to fix first.</p>
             <p><strong>Operating it:</strong> when something misbehaves in production, the trail runs through Kafka consumer lag, Kubernetes/Helm rollout state, Datadog dashboards, and the underlying Postgres/ClickHouse/Redis-backed collections — that's usually where the actual root cause shows up.</p>
           </div>
         </article>
